@@ -84,23 +84,23 @@ Responsive media queries
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-  color: #fffde0;
+  color: #rgba(0, 0, 0, 0);
   background-color: transparent;
 }
 
 @media (max-width: 768px) {
 	.navbar-collapse {
-		background: rgba(50, 60, 70, 0.9);
+		background: rgba(0, 0, 0, 0.5);
 	}
 }
 
 .top-nav-collapse {
   padding: 0;
-  background: rgba(50, 60, 70, 0.9);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .bg-color {
-  background-color: RGBA(0, 0, 0, 0.67);
+  background-color: RGBA(0, 0, 0, 0.5);
   min-height: 1250px;
 }
 
@@ -128,8 +128,8 @@ Responsive media queries
 }
 
 #about {
-  background: url('../img/about-banner.jpg') no-repeat center;
-  background-size: cover;
+  /* background: url('../img/Silly.jpeg') no-repeat; */
+  /* background-size: contain; */
   margin-bottom: -3px;
 }
 
@@ -144,7 +144,7 @@ Responsive media queries
 
 .title-text {
   padding: 0px 25px 0px 0px;
-  border-right: 5px solid #BE2525;
+  border-right: 5px solid #000000;
   font-size: 24px;
 }
 
@@ -214,12 +214,12 @@ blockquote {
   margin: 16px 0 5px;
 }
 
-#contact {
+#messages {
   width: 100%;
   background-color: RGBA(8, 7, 7, 0.92);
 }
 
-#contact .btn-primary {
+#messages .btn-primary {
   background: #BE2525;
   border: 1px solid #BE2525;
 }
@@ -271,7 +271,7 @@ footer {
   display: inline-block;
 }
 
-.contact-sec h2 {
+.messages-sec h2 {
   font-size: 28px;
   color: #fff;
   font-weight: 600;
@@ -290,17 +290,17 @@ footer {
   padding-right: 10px;
 }
 
-.contact-sec p {
+.messages-sec p {
   color: #fff;
   font-size: 18px;
   padding: 16px 0px 24px;
 }
 
-.contact-sec i {
+.messages-sec i {
   padding-right: 15px;
 }
 
-.contact-sec a {
+.messages-sec a {
   color: #FFF;
   background-color: RGBA(174, 142, 142, 0.7);
   display: inline-block;
