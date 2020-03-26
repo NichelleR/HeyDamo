@@ -134,7 +134,6 @@ Responsive media queries
   background-size: contain; */
   margin-bottom: -3px;
   background-color: #FFF;
-<<<<<<< HEAD
   transition: all 0.5s ease-in 0s;
 }
 
@@ -205,8 +204,6 @@ Facebook Messenger Formatting
   /* margin-left: 5%; */
   margin-top: 1.8px;
   /* float: left; */
-=======
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
 }
 
 .fbmessages {
@@ -308,10 +305,7 @@ Timeline Formatting
 
 .about-text p {
   color: #191919;
-<<<<<<< HEAD
   font-size: 15px;
-=======
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
 }
 
 .abt-list li {
@@ -390,11 +384,7 @@ blockquote {
   /* RGBA(8, 7, 7, 0.92); */
 }
 
-<<<<<<< HEAD
 /* #messages .btn-primary {
-=======
-#messages .btn-primary {
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
   background: #BE2525;
   border: 1px solid #BE2525;
 }

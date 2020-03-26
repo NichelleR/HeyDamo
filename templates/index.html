@@ -451,11 +451,7 @@
       </div>
   </section>
   <section id="messages" class="section-padding wow fadeIn delay-05s">
-<<<<<<< HEAD
     <!-- <div class="container"> -->
-=======
-    <div class="container">
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
       <div class="row">
         <div class="col-md-12">
           <div class="messages-sec text-center">
@@ -465,7 +461,6 @@
         </div>
 
         <div class="col-md-8 col-md-push-2">
-<<<<<<< HEAD
           <img src = "../static/img/gen.png" class="img-responsive">
         </div>
       </div>
@@ -587,148 +582,67 @@
     }
   </style>
   <script>
+    /* var colors = d3.scale.category10().domain([1951, 1963]); */
+var width = 2000
+var height = 2000
 
-    // set the dimensions and margins of the graph
-    var width = 860
-    var height = 460
-    
-    // append the svg object to the body of the page
-    var svg = d3.select("#damo_word_dataviz")
-      .append("svg")
-        .attr("width", width)
-        .attr("height", height)
-    
-    // Read data
-    d3.csv("../Resources/11_SevCatOneNumNestedOneObsPerGroup.csv",
-  d3.autoType)then(function (data) {
-    
-      // Filter a bit the data
-      // data = data.filter(function(d){ return d.value>10000000 })
-    
-      // Color palette for continents?
-      var color = d3.scaleOrdinal()
-        .domain(["Asia", "Europe", "Africa", "Oceania", "Americas"])
-        .range(d3.schemeSet1);
-    
-      // Color palette for continents?
-      var size = d3.scaleLinear()
-        .domain([0, 1400000000])
-        .range([9,70])
-    
-        // create a tooltip
-        var Tooltip = d3.select("#damo_word_dataviz")
-          .append("div")
-          .style("opacity", 0)
-          .attr("class", "tooltip")
-          .style("background-color", "white")
-          .style("border", "solid")
-          .style("border-width", "2px")
-          .style("border-radius", "5px")
-          .style("padding", "5px")
-    
-        // Three function that change the tooltip when user hover / move / leave a cell
-        var mouseover = function(d) {
-          Tooltip
-            .style("opacity", 1)
-        }
-        var mousemove = function(d) {
-          Tooltip
-            .html('<u>' + d.key + '</u>' + "<br>" + d.value + " inhabitants")
-            .style("left", (d3.event.pageX+20) + "px")
-            .style("top", (d3.event.pageY-30) + "px")
-        }
-        var mouseleave = function(d) {
-          Tooltip
-            .style("opacity", 0)
-        }
-    
-      // Initialize the circle: all located at the center of the svg area
-      var node = svg.append("g")
-        .selectAll("circle")
-        .data(data)
-        .enter()
-        .append("circle")
-          .attr("class", "node")
-          .attr("r", function(d){ return size(d.value)})
-          .attr("cx", width / 2)
-          .attr("cy", height / 2)
-          .style("fill", function(d){ return color(d.region)})
-          .style("fill-opacity", 0.7)
-          .attr("stroke", "black")
-          .style("stroke-width", 1)
-          .on("mouseover", mouseover)
-          .on("mousemove", mousemove)
-          .on("mouseleave", mouseleave)
-          .call(d3.drag() // call specific function when circle is dragged
-              .on("start", dragstarted)
-              .on("drag", dragged)
-              .on("end", dragended));
-    
-      // Features of the forces applied to the nodes:
-      var simulation = d3.forceSimulation()
-          .force("y", d3.forceY().y(height / 2)) // Attraction to the center of the svg area
-          .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
-          .force("charge", d3.forceManyBody().strength(.1)) // Nodes are attracted one each other of value is > 0
-          .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (size(d.value)+3) }).iterations(1)) // Force that avoids circle overlapping
-    
-      // Apply these forces to the nodes and update their positions.
-      // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
-      simulation
-          .nodes(data)
-          .on("tick", function(d){
-            node
-                .attr("cx", function(d){ return d.x; })
-                .attr("cy", function(d){ return d.y; })
-          });
-    
-      // What happens when a circle is dragged?
-      function dragstarted(d) {
-        if (!d3.event.active) simulation.alphaTarget(.03).restart();
-        d.fx = d.x;
-        d.fy = d.y;
-      }
-      function dragged(d) {
-        d.fx = d3.event.x;
-        d.fy = d3.event.y;
-      }
-      function dragended(d) {
-        if (!d3.event.active) simulation.alphaTarget(.03);
-        d.fx = null;
-        d.fy = null;
-      }
-    
-    })
-    
-    // Explanation
-    svg
-      .append("text")
-        .attr("text-anchor", "end")
-        .style("fill", "#B8B8B8")
-        .style("font-size", "14px")
-        .attr("x", width-30)
-        .attr("y", height-90)
-        .attr("width", 90)
-        .html("Distribution of the world population")
-    svg
-      .append("text")
-        .attr("text-anchor", "end")
-        .style("fill", "#B8B8B8")
-        .style("font-size", "14px")
-        .attr("x", width-30)
-        .attr("y", height-65)
-        .attr("width", 90)
-        .html("Hover and drag for more")
-    
-    </script>            
+// append the svg object to the body of the page
+var svg = d3.select("#damo_word_dataviz")
+  .append("svg")
+    .attr("width", width)
+    .attr("height", height)
 
-=======
-            
-        </div>
 
-      </div>
-    </div>
-  </section>
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
+d3.csv("https://raw.githubusercontent.com/NichelleR/ReasonsWhy/master/Resources/adam_df.csv?token=AKKLNG3WWHU6RSW37DAAEVS6PPSLA", function(data) {
+  console.log(data[0]);
+
+
+  // data = data.filter(function(d){ return d.word_count>100 })
+   
+  var size = d3.scaleLinear()
+    .domain([0, 140000000000])
+    .range([7,10])  // circle will be between 7 and 55 px wide
+
+  var color = d3.scaleOrdinal()
+    /* .domain(["Asia", "Europe", "Africa", "Oceania", "Americas"]) */
+    .range(d3.schemeSet1);
+
+
+  var node = svg.append("g")
+    .selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("class", "node")
+      .attr("r", function(d){ return size(10)})
+      .attr("cx", width / 2)
+      .attr("cy", height / 2)
+      .style("fill", function(d){ return color(d.word)})
+            .style("fill-opacity", 0.8)
+      .attr("stroke", "red")
+      .style("stroke-width", 1);
+           
+// Features of the forces applied to the nodes:
+  var simulation = d3.forceSimulation()
+      .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+      .force("charge", d3.forceManyBody().strength(0.1)) 
+// Nodes are attracted one each other of value is > 0
+/*       .force("collide", d3.forceCollide().strength(0.2).radius(function(d){ return (size(d.value)+3) }).iterations(1)) 
+       */// Force that avoids circle overlapping
+
+  // Apply these forces to the nodes and update their positions.
+  // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
+  simulation
+      .nodes(data)
+      .on("tick", function(d){
+        node
+            .attr("cx", function(d){ return d.x; })
+            .attr("cy", function(d){ return d.y; })
+      });
+
+})
+  </script>            
+
   <section id="portfolio" class="section-padding wow fadeInUp delay-05s">
     <div class="container">
       <div class="row">
@@ -774,11 +688,7 @@
         <div class="test-sec">
           <div class="col-sm-4">
             <blockquote>
-<<<<<<< HEAD
               <h4>Combined incomes may lead to a better mortgage rate</h4>
-=======
-              <h3>Combined incomes may lead to a better mortgage rate</h3>
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
               <p>Being married gives you more flexibility and that’s the name of the game when you’re trying to getting a better mortgage rate and/or trying to apply for a larger loan.
                 <br><br>
                 You’ll want to get a joint mortgage which is a mortgage that you both share together. Why? Because lenders will consider both of your incomes. Two incomes are bound to be higher than one, and the larger total income will often qualify you for a bigger loan with better repayment terms than you could get on your own.
@@ -791,30 +701,18 @@
 
           <div class="col-sm-4">
             <blockquote>
-<<<<<<< HEAD
               <h4>The law may protect you if your spouse dies</h4>
               <p>If your spouse suddenly passes away without a will, as the surviving spouse your state’s intestacy laws may still allow you to claim certain assets that, say, were solely owned by your spouse. “Our society has some built-in protections for married couples,” says Robertson. “If you aren’t married, the rules of intestacy will not apply and you will inherit no money unless your partner has a will directing assets to you."</p>
             </blockquote>
             <div class="carousel-info">
               <div class="pull-left"> <span class="testimonials-name">Farnoosh Torabi</span> <span class="testimonials-post"><a href = "https://www.hermoney.com/connect/marriage/financial-pros-and-cons-of-marriage/">Writer,  Her Money</a></span> </div>
-=======
-              <h3>Health insurance is easier — and cheaper — to maintain</h3>
-              <p>One partner may have great coverage through an employer while another does not. And insurers generally charge less for a single policy covering two people than they do for two separate policies.</p>
-            </blockquote>
-            <div class="carousel-info">
-              <div class="pull-left"> <span class="testimonials-name">Lisen Stromberg</span> <span class="testimonials-post"><a href = "https://www.moneyunder30.com/financial-benefits-of-marriage">Writer,  Money Under 30</a></span> </div>
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
             </div>
           </div>
 
 
           <div class="col-sm-4">
             <blockquote>
-<<<<<<< HEAD
               <h4>Spouses get better rates on home and auto insurance</h4>
-=======
-              <h3>Spouses get better rates on home and auto insurance</h3>
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
               <p>With auto insurance, whether you’re purchasing a policy or hoping for a lower rate on an existing policy, see what deals are available for married couples because studies now point to the fact that married people are getting better auto insurance rates. Period. 
                 <br><br>
                 With home insurance, most companies just give a flat-out-discount if you’re married. Here again, the bottom line is that couples get this type of automatic discount.</p>
@@ -923,14 +821,11 @@
   <script src="../static/js/jquery.bxslider.min.js"></script>
   <script src="../static/js/wow.js"></script>
   <script src="../static/js/custom.js"></script>
-<<<<<<< HEAD
   <!-- <script src="https://d3js.org/d3.v4.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script> -->
 
 
-=======
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
 
 </body>
 
