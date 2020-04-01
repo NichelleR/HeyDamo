@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 
 <head>
@@ -445,7 +445,7 @@
       </div>
   </section>
   <section id="messages" class="section-padding wow fadeIn delay-05s">
-    <!-- <div class="container"> -->
+  <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="messages-sec text-center">
@@ -458,128 +458,29 @@
           <img src = "../static/img/gen.png" class="img-responsive">
         </div>
       </div>
-        <div class="col-md-6">
+        <!-- <div class="row"> -->
           <script src="https://d3js.org/d3.v4.js"></script>
           <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-
-          <div id="damo_word_dataviz">
-            <!-- <svg width="860" height="460">
-              <text text-anchor="end" x="830" y="370" width="90" style="fill: rgb(184, 184, 184); font-size: 14px;">Distribution of the world population</text>
-              <text text-anchor="end" x="830" y="395" width="90" style="fill: rgb(184, 184, 184); font-size: 14px;">Hover and drag for more</text>
-              <g>
-                <circle class="node" r="10.111075785714286" cx="491.71236348541083" cy="178.0832774103777" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.651357142857144" cx="330.4458526878709" cy="264.20604719539153" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.897976381428572" cx="442.8607971036362" cy="178.502380347657" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.747959182857143" cx="338.8537615853463" cy="240.3061126754954" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.013216187142858" cx="395.2111038074149" cy="229.01115126654446" stroke="black" style="fill: rgb(152, 78, 163); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="15.64542779642857" cx="509.8837196908832" cy="154.63296774264742" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.486939166428572" cx="374.0742387851765" cy="290.0478928181168" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.449787857142857" cx="348.9130115657341" cy="220.7977500886198" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.436901781428572" cx="423.31418650839726" cy="191.60139902520663" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="17.759282538571426" cx="374.541503354222" cy="204.16674807136113" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.75477896857143" cx="392.5413362915231" cy="251.11535222031532" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.442816428571428" cx="352.5966861127701" cy="257.02888882837317" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.659453571428571" cx="324.6920685964459" cy="221.2005627965837" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.888281956428571" cx="542.355555572388" cy="168.93316384284665" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.531897531428571" cx="372.90786429821816" cy="265.3792591294722" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.558803571428571" cx="314.9888808073644" cy="243.23626669127697" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.724793416428572" cx="540.0177453653556" cy="287.50247477014045" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="68.30812142857143" cx="189.69081162244896" cy="225.3616404627959" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="11.062235714285714" cx="596.4164025847724" cy="243.26153625689946" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="11.941681428571428" cx="298.4920851790252" cy="222.32684022822903" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.486576303571429" cx="312.7912040666125" cy="200.7093102317454" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.458062071428571" cx="547.0191026178676" cy="264.9939765113503" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.680494214285714" cx="350.7056794683364" cy="280.8440303972724" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="12.645229285714287" cx="540.2393876435224" cy="211.5185022125774" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="12.773895104285714" cx="549.6488662167552" cy="239.26006292910478" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="11.867261428571428" cx="261.2216217684273" cy="177.63490800015254" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="12.508532642857142" cx="614.4696695780218" cy="196.90493712298556" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.074420145" cx="290.9920230947389" cy="247.62332072853366" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.47123358357143" cx="336.8626428115963" cy="201.3793230233813" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.672672445714285" cx="572.9896688943883" cy="253.81715297335455" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.471625857142858" cx="274.1685668443713" cy="292.89325753320776" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.453718479285714" cx="636.1090202968192" cy="213.09268150442168" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="62.883478571428576" cx="470.094034532477" cy="252.008153356384" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="19.35437206142857" cx="377.07357004732586" cy="161.98326734847382" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="12.357962857142857" cx="663.3436968376939" cy="215.6638842850255" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.482953571428572" cx="325.4056282990421" cy="178.99967703196123" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="11.606838442142857" cx="369.5137971492698" cy="237.78745865289017" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="14.546207142857142" cx="622.4824979168014" cy="258.886494019606" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.745027857142857" cx="59.85656259693599" cy="226.1991111243989" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.932567142857142" cx="574.7199442301098" cy="228.22693816336215" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.901757335714287" cx="272.7600124919476" cy="231.67555219631953" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.712959285714286" cx="293.97085250070666" cy="186.4216464502164" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.298149714285714" cx="661.8920432809724" cy="253.02282920131813" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.66673" cx="266.99761080348264" cy="254.23222131184494" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="14.158641638571428" cx="520.4693449929689" cy="187.40698458155475" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.441678357142857" cx="593.721629201008" cy="269.55037372106915" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.032674010714286" cx="112.27011556521305" cy="192.4136646676268" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.154403388571428" cx="618.6465073530438" cy="229.346459280877" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.73231807142857" cx="256.07947766330597" cy="276.0968599431296" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.746338311428572" cx="401.403026877967" cy="185.02797783770265" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="16.564653571428572" cx="712.3563514292865" cy="244.44127225924203" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.084710714285714" cx="107.1709279488769" cy="242.08959631014685" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="17.053960714285715" cx="647.3636995871806" cy="184.41488728421976" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.32784556" cx="395.2508919476071" cy="275.55403776837807" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="13.299541428571427" cx="274.0308374795367" cy="204.7595910409376" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.678950884999999" cx="643.4649643177008" cy="236.26424284569762" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.460209184285715" cx="282.93402429324715" cy="271.0091967803191" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.876728643571429" cx="406.3183109012347" cy="208.4719050584022" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="15.2525" cx="649.954050844346" cy="280.7305942035499" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.459121815714285" cx="84.40066166912098" cy="230.8459813442995" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.30689328" cx="680.9847524791265" cy="237.04400395608494" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.59114829857143" cx="324.88767126282164" cy="288.1358048153171" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.457325714285714" cx="350.2820250068339" cy="182.56488207463647" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="11.308501036428572" cx="744.3450613555691" cy="234.6868529710374" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="11.188142720714286" cx="115.37605294696833" cy="267.1800665814994" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.492182857142858" cx="597.8831896322639" cy="218.11448719496303" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="11.034973681428571" cx="568.3376929800114" cy="279.2071113505301" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.883523869285714" cx="81.85055138678875" cy="206.30096085743466" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.654145714285715" cx="725.6379185071884" cy="214.22295677902025" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.954127142857143" cx="306.70237239896795" cy="266.2293579168973" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.017878547857142" cx="467.0409319845273" cy="173.6009724193201" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.957617359285715" cx="740.4322362849631" cy="262.07562838835804" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="11.872501372142857" cx="84.04504511890025" cy="257.44348281807123" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.472028065" cx="678.27593896925" cy="192.39666310676174" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="12.29519316" cx="405.4125844037817" cy="300.61709474883264" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.540555" cx="303.906168275002" cy="163.8537125485426" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.980828033571429" cx="752.4777785899896" cy="208.21355878877526" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="11.775717857142856" cx="164.9945176402516" cy="306.8304272429342" stroke="black" style="fill: rgb(55, 126, 184); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="22.81654357142857" cx="574.1719093815482" cy="189.50540273970338" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.315133857142857" cx="685.6604409920825" cy="262.9605280987427" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.261222972142857" cx="105.65830292430816" cy="216.88460550676393" stroke="black" style="fill: rgb(255, 127, 0); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="12.938334285714285" cx="696.4407892586919" cy="213.13914734346855" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="10.068676428571429" cx="299.44679353111906" cy="290.0193807290641" stroke="black" style="fill: rgb(228, 26, 28); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.570466161428572" cx="419.8050036872948" cy="168.34424284092265" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                <circle class="node" r="9.56528734857143" cx="770.485084004634" cy="229.5809982607308" stroke="black" style="fill: rgb(77, 175, 74); fill-opacity: 0.7; stroke-width: 1;"></circle>
-                </g> -->
-                <!-- </svg> -->
-                <!-- <div class="tooltip" style="opacity: 0; background-color: white; border: 2px solid; border-radius: 5px; padding: 5px; left: 679px; top: 1498px;">
-                <u>India</u>
-                <br>
-                1236670000 inhabitants
-                </div> -->
-          </div>
-
-        </div>
-        <div class="col-ld-6">
-          <div id="mims_word_dataviz">
-          </div>
-
+      <div class="row">
+        <div id="damo_word_dataviz" class="col-md-6">          
         </div>
       <!-- </div> -->
-    <!-- </div> -->
+      <!-- <div id="col-lg-6"> -->
+        <div id="mims_word_dataviz" class="col-md-6">
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="row">
+        <div id="messages_dataviz">
+        </div>
+      </div>
+    </div>
   </section>
-  <style>
-    .node:hover{
-      stroke-width: 7px !important;
-      opacity: 1 !important;
-    }
-  </style>
+  <!-- Damo Word Viz -->
   <script>
     /* var colors = d3.scale.category10().domain([1951, 1963]); */
-    var width = 750
-    var height = 750
+    var width = 900
+    var height = 900
 
     // append the svg object to the body of the page
     var damo_svg = d3.select("#damo_word_dataviz")
@@ -596,17 +497,21 @@
             console.log(data[0]);
 
 
-      data = data.filter(function(d){ return d.word_count>50 })
+      data = data.filter(function(d){ return d.word_count>25 })
       
       var size = d3.scaleLinear()
         .domain([0, 10000])
-        .range([7,30])  // circle will be between 7 and 55 px wide
+        .range([4,30])  // circle will be between 7 and 55 px wide
 
       var color = d3.scaleOrdinal()
-        /* .domain(["Asia", "Europe", "Africa", "Oceania", "Americas"]) */
-        .range(d3.schemeSet1);
+        .domain(function(d){ return d.word_count})
+        // .range(d3.schemeSet1);
+        .range(["#23171b","#271a28","#2b1c33","#2f1e3f","#32204a","#362354","#39255f","#3b2768","#3e2a72","#402c7b","#422f83","#44318b","#453493","#46369b","#4839a2","#493ca8","#493eaf","#4a41b5","#4a44bb","#4b46c0","#4b49c5","#4b4cca","#4b4ecf","#4b51d3","#4a54d7","#4a56db","#4959de","#495ce2","#485fe5","#4761e7","#4664ea","#4567ec","#446aee","#446df0","#426ff2","#4172f3","#4075f5","#3f78f6","#3e7af7","#3d7df7","#3c80f8","#3a83f9","#3985f9","#3888f9","#378bf9","#368df9","#3590f8","#3393f8","#3295f7","#3198f7","#309bf6","#2f9df5","#2ea0f4","#2da2f3","#2ca5f1","#2ba7f0","#2aaaef","#2aaced","#29afec","#28b1ea","#28b4e8","#27b6e6","#27b8e5","#26bbe3","#26bde1","#26bfdf","#25c1dc","#25c3da","#25c6d8","#25c8d6","#25cad3","#25ccd1","#25cecf","#26d0cc","#26d2ca","#26d4c8","#27d6c5","#27d8c3","#28d9c0","#29dbbe","#29ddbb","#2adfb8","#2be0b6","#2ce2b3","#2de3b1","#2ee5ae","#30e6ac","#31e8a9","#32e9a6","#34eba4","#35eca1","#37ed9f","#39ef9c","#3af09a","#3cf197","#3ef295","#40f392","#42f490","#44f58d","#46f68b","#48f788","#4af786","#4df884","#4ff981","#51fa7f","#54fa7d","#56fb7a","#59fb78","#5cfc76","#5efc74","#61fd71","#64fd6f","#66fd6d","#69fd6b","#6cfd69","#6ffe67","#72fe65","#75fe63","#78fe61","#7bfe5f","#7efd5d","#81fd5c","#84fd5a","#87fd58","#8afc56","#8dfc55","#90fb53","#93fb51","#96fa50","#99fa4e","#9cf94d","#9ff84b","#a2f84a","#a6f748","#a9f647","#acf546","#aff444","#b2f343","#b5f242","#b8f141","#bbf03f","#beef3e","#c1ed3d","#c3ec3c","#c6eb3b","#c9e93a","#cce839","#cfe738","#d1e537","#d4e336","#d7e235","#d9e034","#dcdf33","#dedd32","#e0db32","#e3d931","#e5d730","#e7d52f","#e9d42f","#ecd22e","#eed02d","#f0ce2c","#f1cb2c","#f3c92b","#f5c72b","#f7c52a","#f8c329","#fac029","#fbbe28","#fdbc28","#feb927","#ffb727","#ffb526","#ffb226","#ffb025","#ffad25","#ffab24","#ffa824","#ffa623","#ffa323","#ffa022","#ff9e22","#ff9b21","#ff9921","#ff9621","#ff9320","#ff9020","#ff8e1f","#ff8b1f","#ff881e","#ff851e","#ff831d","#ff801d","#ff7d1d","#ff7a1c","#ff781c","#ff751b","#ff721b","#ff6f1a","#fd6c1a","#fc6a19","#fa6719","#f96418","#f76118","#f65f18","#f45c17","#f25916","#f05716","#ee5415","#ec5115","#ea4f14","#e84c14","#e64913","#e44713","#e24412","#df4212","#dd3f11","#da3d10","#d83a10","#d5380f","#d3360f","#d0330e","#ce310d","#cb2f0d","#c92d0c","#c62a0b","#c3280b","#c1260a","#be2409","#bb2309","#b92108","#b61f07","#b41d07","#b11b06","#af1a05","#ac1805","#aa1704","#a81604","#a51403","#a31302","#a11202","#9f1101","#9d1000","#9b0f00","#9a0e00","#980e00","#960d00","#950c00","#940c00","#930c00","#920c00","#910b00","#910c00","#900c00","#900c00","#900c00"])
+        // .range(["#23171b","#271a28","#2b1c33","#2f1e3f","#32204a","#362354","#39255f","#3b2768","#3e2a72","#402c7b","#422f83","#44318b","#453493","#46369b","#4839a2","#493ca8","#493eaf","#4a41b5","#4a44bb","#4b46c0","#4b49c5","#4b4cca","#4b4ecf","#4b51d3","#4a54d7","#4a56db","#4959de","#495ce2","#485fe5","#4761e7","#4664ea","#4567ec","#446aee","#446df0","#426ff2","#4172f3","#4075f5","#3f78f6","#3e7af7","#3d7df7","#3c80f8","#3a83f9","#3985f9","#3888f9","#378bf9","#368df9","#3590f8","#3393f8","#3295f7","#3198f7","#309bf6","#2f9df5","#2ea0f4","#2da2f3","#2ca5f1","#2ba7f0","#2aaaef","#2aaced","#29afec","#28b1ea","#28b4e8","#27b6e6","#27b8e5","#26bbe3","#26bde1","#26bfdf","#25c1dc","#25c3da","#25c6d8","#25c8d6","#25cad3","#25ccd1","#25cecf","#26d0cc","#26d2ca","#26d4c8","#27d6c5","#27d8c3","#28d9c0","#29dbbe","#29ddbb","#2adfb8","#2be0b6","#2ce2b3","#2de3b1","#2ee5ae","#30e6ac","#31e8a9","#32e9a6","#34eba4","#35eca1","#37ed9f","#39ef9c","#3af09a","#3cf197","#3ef295","#40f392","#42f490","#44f58d","#46f68b","#48f788","#4af786","#4df884","#4ff981","#51fa7f","#54fa7d","#56fb7a","#59fb78","#5cfc76","#5efc74","#61fd71","#64fd6f","#66fd6d","#69fd6b","#6cfd69","#6ffe67","#72fe65","#75fe63","#78fe61","#7bfe5f","#7efd5d","#81fd5c","#84fd5a","#87fd58","#8afc56","#8dfc55","#90fb53","#93fb51","#96fa50","#99fa4e","#9cf94d","#9ff84b","#a2f84a","#a6f748","#a9f647","#acf546","#aff444","#b2f343","#b5f242","#b8f141","#bbf03f","#beef3e","#c1ed3d","#c3ec3c","#c6eb3b","#c9e93a","#cce839","#cfe738","#d1e537","#d4e336","#d7e235","#d9e034","#dcdf33","#dedd32","#e0db32","#e3d931","#e5d730","#e7d52f","#e9d42f","#ecd22e","#eed02d","#f0ce2c","#f1cb2c","#f3c92b","#f5c72b","#f7c52a","#f8c329","#fac029","#fbbe28","#fdbc28","#feb927","#ffb727","#ffb526","#ffb226","#ffb025","#ffad25","#ffab24","#ffa824","#ffa623","#ffa323","#ffa022","#ff9e22","#ff9b21","#ff9921","#ff9621","#ff9320","#ff9020","#ff8e1f","#ff8b1f","#ff881e","#ff851e","#ff831d","#ff801d","#ff7d1d","#ff7a1c","#ff781c","#ff751b","#ff721b","#ff6f1a","#fd6c1a","#fc6a19","#fa6719","#f96418","#f76118","#f65f18","#f45c17","#f25916","#f05716","#ee5415","#ec5115","#ea4f14","#e84c14","#e64913","#e44713","#e24412","#df4212","#dd3f11","#da3d10","#d83a10","#d5380f","#d3360f","#d0330e","#ce310d","#cb2f0d","#c92d0c","#c62a0b","#c3280b","#c1260a","#be2409","#bb2309","#b92108","#b61f07","#b41d07","#b11b06","#af1a05","#ac1805","#aa1704","#a81604","#a51403","#a31302","#a11202","#9f1101","#9d1000","#9b0f00","#9a0e00","#980e00","#960d00","#950c00","#940c00","#930c00","#920c00","#910b00","#910c00","#900c00","#900c00","#900c00"]);
+        // .range(["rgb(123, 65, 115)", "rgb(165, 81, 148)", "rgb(206, 109, 189)", "rgb(222, 158, 214", "rgb(57, 59, 121)", "rgb(82, 84, 163)", "rgb(107, 110, 207)", "rgb(156, 158, 222)", "rgb(99, 121, 57)", "rgb(140, 162, 82)", "rgb(181, 207, 107)", "rgb(206, 219, 156)", "rgb(245, 187, 87)", "rgb(237, 151, 69)", "rgb(236, 127, 68)", "rgb(192, 27, 29)", "rgb(132, 60, 57)", "rgb(173, 73, 74)", "rgb(214, 97, 107)", "rgb(231, 150, 156)"]);
+        // .range(["#33608C", "#5D649A", "#8866A3", "#B167A1", "#D46C96", "#EC7584", "#FB8576", "#FB8576", "#ED9745", "#EC7F44", "#E86948", "#CF4643", "#C2323F", "#B71840"]);
 
-      var Tooltip = d3.select("#damo_word_dataviz")
+      var Damo_Tooltip = d3.select("#damo_word_dataviz")
         .append("div")
         .style("opacity", 0)
         .attr("class", "tooltip")
@@ -615,23 +520,24 @@
         .style("border-width", "2px")
         .style("border-radius", "5px")
         .style("padding", "5px")
+        .style("position", "absolute")
 
       // Three function that change the tooltip when user hover / move / leave a cell
-      var mouseover = function(d) {
-        Tooltip
+      var damo_mouseover = function(d) {
+        Damo_Tooltip
           .style("opacity", 1)
           .style("visibility", "visible")
       }
-      var mousemove = function(d) {
-        Tooltip
-          .html('<u>' + d.word + '</u>' + "<br>" + d.word_count)
-          .style("top", (event.pageY-50)+"px")
-          .style("left",(event.pageX-50)+"px")
-          // .style("left", (d3.mouse(this)[0]+20) + "px")
-          // .style("top", (d3.mouse(this)[1]) + "px")
+      var damo_mousemove = function(d) {
+        Damo_Tooltip
+          .html("Word: " + d.word + "<br>" + "Word Count: " + d.word_count)
+          // .style("top", (event.pageY-50)+"px")
+          // .style("left",(event.pageX-50)+"px")
+          .style("left", (d3.mouse(this)[0]+20) + "px")
+          .style("top", (d3.mouse(this)[1]) + "px")
       }
-      var mouseleave = function(d) {
-        Tooltip
+      var damo_mouseleave = function(d) {
+        Damo_Tooltip
           .style("opacity", 0)
           .style("visibility", "hidden")
       }
@@ -647,11 +553,11 @@
           .attr("cy", height / 2)
           .style("fill", function(d){ return color(d.word)})
           .style("fill-opacity", 0.8)
-          .attr("stroke", "black")
+          .attr("stroke", "#191919")
           .style("stroke-width", 1)
-          .on("mouseover", mouseover) // What to do when hovered
-          .on("mousemove", mousemove)
-          .on("mouseleave", mouseleave)
+          .on("mouseover", damo_mouseover) // What to do when hovered
+          .on("mousemove", damo_mousemove)
+          .on("mouseleave", damo_mouseleave)
           .call(d3.drag() // call specific function when circle is dragged
               .on("start", dragstarted)
               .on("drag", dragged)
@@ -660,7 +566,7 @@
       // Features of the forces applied to the nodes:
       var simulation = d3.forceSimulation()
           .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
-          .force("charge", d3.forceManyBody().strength(0.5)) // Nodes are attracted one each other of value is > 0
+          .force("charge", d3.forceManyBody().strength(0.1)) // Nodes are attracted one each other of value is > 0
           .force("collide", d3.forceCollide().strength(0.5).radius(function(d){ return (size(d.word_count)+3) }).iterations(1)) // Force that avoids circle overlapping
 
       // Apply these forces to the nodes and update their positions.
@@ -696,26 +602,27 @@
     damo_svg
       .append("text")
         .attr("text-anchor", "end")
-        .style("fill", "#B8B8B8")
+        .style("fill", "#ffffff")
         .style("font-size", "14px")
         .attr("x", width-30)
         .attr("y", height-90)
         .attr("width", 90)
-        .html("Distribution of the world population")
+        .html("Distribution of words Damo has used")
     damo_svg
       .append("text")
         .attr("text-anchor", "end")
-        .style("fill", "#B8B8B8")
+        .style("fill", "#ffffff")
         .style("font-size", "14px")
         .attr("x", width-30)
         .attr("y", height-65)
         .attr("width", 90)
-        .html("Hover and drag for more")
-  </script>            
+        .html("Hover and drag for more information")
+  </script>    
+  <!-- MiMs Word Viz -->
   <script>
     /* var colors = d3.scale.category10().domain([1951, 1963]); */
-    var width = 750
-    var height = 750
+    var width = 900
+    var height = 900
 
     // append the svg object to the body of the page
     var mims_svg = d3.select("#mims_word_dataviz")
@@ -732,17 +639,18 @@
             console.log(data[0]);
 
 
-      data = data.filter(function(d){ return d.word_count>50 })
+      data = data.filter(function(d){ return d.word_count>25 })
       
       var size = d3.scaleLinear()
         .domain([0, 10000])
-        .range([7,30])  // circle will be between 7 and 55 px wide
+        .range([4,30])  // circle will be between 7 and 55 px wide
 
       var color = d3.scaleOrdinal()
-        /* .domain(["Asia", "Europe", "Africa", "Oceania", "Americas"]) */
-        .range(d3.schemeSet1);
+        .domain(function(d){ return d.word})
+        .range(["#23171b","#271a28","#2b1c33","#2f1e3f","#32204a","#362354","#39255f","#3b2768","#3e2a72","#402c7b","#422f83","#44318b","#453493","#46369b","#4839a2","#493ca8","#493eaf","#4a41b5","#4a44bb","#4b46c0","#4b49c5","#4b4cca","#4b4ecf","#4b51d3","#4a54d7","#4a56db","#4959de","#495ce2","#485fe5","#4761e7","#4664ea","#4567ec","#446aee","#446df0","#426ff2","#4172f3","#4075f5","#3f78f6","#3e7af7","#3d7df7","#3c80f8","#3a83f9","#3985f9","#3888f9","#378bf9","#368df9","#3590f8","#3393f8","#3295f7","#3198f7","#309bf6","#2f9df5","#2ea0f4","#2da2f3","#2ca5f1","#2ba7f0","#2aaaef","#2aaced","#29afec","#28b1ea","#28b4e8","#27b6e6","#27b8e5","#26bbe3","#26bde1","#26bfdf","#25c1dc","#25c3da","#25c6d8","#25c8d6","#25cad3","#25ccd1","#25cecf","#26d0cc","#26d2ca","#26d4c8","#27d6c5","#27d8c3","#28d9c0","#29dbbe","#29ddbb","#2adfb8","#2be0b6","#2ce2b3","#2de3b1","#2ee5ae","#30e6ac","#31e8a9","#32e9a6","#34eba4","#35eca1","#37ed9f","#39ef9c","#3af09a","#3cf197","#3ef295","#40f392","#42f490","#44f58d","#46f68b","#48f788","#4af786","#4df884","#4ff981","#51fa7f","#54fa7d","#56fb7a","#59fb78","#5cfc76","#5efc74","#61fd71","#64fd6f","#66fd6d","#69fd6b","#6cfd69","#6ffe67","#72fe65","#75fe63","#78fe61","#7bfe5f","#7efd5d","#81fd5c","#84fd5a","#87fd58","#8afc56","#8dfc55","#90fb53","#93fb51","#96fa50","#99fa4e","#9cf94d","#9ff84b","#a2f84a","#a6f748","#a9f647","#acf546","#aff444","#b2f343","#b5f242","#b8f141","#bbf03f","#beef3e","#c1ed3d","#c3ec3c","#c6eb3b","#c9e93a","#cce839","#cfe738","#d1e537","#d4e336","#d7e235","#d9e034","#dcdf33","#dedd32","#e0db32","#e3d931","#e5d730","#e7d52f","#e9d42f","#ecd22e","#eed02d","#f0ce2c","#f1cb2c","#f3c92b","#f5c72b","#f7c52a","#f8c329","#fac029","#fbbe28","#fdbc28","#feb927","#ffb727","#ffb526","#ffb226","#ffb025","#ffad25","#ffab24","#ffa824","#ffa623","#ffa323","#ffa022","#ff9e22","#ff9b21","#ff9921","#ff9621","#ff9320","#ff9020","#ff8e1f","#ff8b1f","#ff881e","#ff851e","#ff831d","#ff801d","#ff7d1d","#ff7a1c","#ff781c","#ff751b","#ff721b","#ff6f1a","#fd6c1a","#fc6a19","#fa6719","#f96418","#f76118","#f65f18","#f45c17","#f25916","#f05716","#ee5415","#ec5115","#ea4f14","#e84c14","#e64913","#e44713","#e24412","#df4212","#dd3f11","#da3d10","#d83a10","#d5380f","#d3360f","#d0330e","#ce310d","#cb2f0d","#c92d0c","#c62a0b","#c3280b","#c1260a","#be2409","#bb2309","#b92108","#b61f07","#b41d07","#b11b06","#af1a05","#ac1805","#aa1704","#a81604","#a51403","#a31302","#a11202","#9f1101","#9d1000","#9b0f00","#9a0e00","#980e00","#960d00","#950c00","#940c00","#930c00","#920c00","#910b00","#910c00","#900c00","#900c00","#900c00"]);
+        // .range(d3.schemeSet1);
 
-      var Tooltip = d3.select("#mims_word_dataviz")
+      var MiMs_Tooltip = d3.select("#mims_word_dataviz")
         .append("div")
         .style("opacity", 0)
         .attr("class", "tooltip")
@@ -751,23 +659,26 @@
         .style("border-width", "2px")
         .style("border-radius", "5px")
         .style("padding", "5px")
+        // .style("position", "relative")
+        // .style("display", "inline-block")
+
 
       // Three function that change the tooltip when user hover / move / leave a cell
-      var mouseover = function(d) {
-        Tooltip
+      var mims_mouseover = function(d) {
+        MiMs_Tooltip
           .style("opacity", 1)
           .style("visibility", "visible")
       }
-      var mousemove = function(d) {
-        Tooltip
-          .html('<u>' + d.word + '</u>' + "<br>" + d.word_count)
-          .style("top", (event.pageY-50)+"px")
-          .style("left",(event.pageX-50)+"px")
-          // .style("left", (d3.mouse(this)[0]+20) + "px")
-          // .style("top", (d3.mouse(this)[1]) + "px")
+      var mims_mousemove = function(d) {
+        MiMs_Tooltip
+          .html("Word: " + d.word + "<br>" + "Word Count: " + d.word_count)
+          // .style("top", (event.pageY-50)+"px")
+          // .style("left",(event.pageX-50)+"px")
+          .style("left", (d3.mouse(this)[0]+20) + "px")
+          .style("top", (d3.mouse(this)[1]) + "px")
       }
-      var mouseleave = function(d) {
-        Tooltip
+      var mims_mouseleave = function(d) {
+        MiMs_Tooltip
           .style("opacity", 0)
           .style("visibility", "hidden")
       }
@@ -783,11 +694,11 @@
           .attr("cy", height / 2)
           .style("fill", function(d){ return color(d.word)})
           .style("fill-opacity", 0.8)
-          .attr("stroke", "black")
+          .attr("stroke", "#191919")
           .style("stroke-width", 1)
-          .on("mouseover", mouseover) // What to do when hovered
-          .on("mousemove", mousemove)
-          .on("mouseleave", mouseleave)
+          .on("mouseover", mims_mouseover) // What to do when hovered
+          .on("mousemove", mims_mousemove)
+          .on("mouseleave", mims_mouseleave)
           .call(d3.drag() // call specific function when circle is dragged
               .on("start", dragstarted)
               .on("drag", dragged)
@@ -796,7 +707,7 @@
       // Features of the forces applied to the nodes:
       var simulation = d3.forceSimulation()
           .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
-          .force("charge", d3.forceManyBody().strength(0.5)) // Nodes are attracted one each other of value is > 0
+          .force("charge", d3.forceManyBody().strength(0.1)) // Nodes are attracted one each other of value is > 0
           .force("collide", d3.forceCollide().strength(0.5).radius(function(d){ return (size(d.word_count)+3) }).iterations(1)) // Force that avoids circle overlapping
 
       // Apply these forces to the nodes and update their positions.
@@ -832,22 +743,116 @@
     mims_svg
       .append("text")
         .attr("text-anchor", "end")
-        .style("fill", "#B8B8B8")
+        .style("fill", "#ffffff")
         .style("font-size", "14px")
         .attr("x", width-30)
         .attr("y", height-90)
         .attr("width", 90)
-        .html("Distribution of the world population")
+        .html("Distribution of words MiMs has used")
     mims_svg
       .append("text")
         .attr("text-anchor", "end")
-        .style("fill", "#B8B8B8")
+        .style("fill", "#ffffff")
         .style("font-size", "14px")
         .attr("x", width-30)
         .attr("y", height-65)
         .attr("width", 90)
-        .html("Hover and drag for more")
+        .html("Hover and drag for more information")
   </script>            
+  <!-- Messages Word Viz -->
+  <script>
+
+// set the dimensions and margins of the graph
+var margin = {top: 25, right: 30, bottom: 30, left: 60},
+    w = 1750 - margin.left - margin.right,
+    h = 900 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var messages_svg = d3.select("#messages_dataviz")
+  .append("svg")
+    .attr("width", w + margin.left + margin.right)
+    .attr("height", h + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+//Read the data
+d3.csv("https://raw.githubusercontent.com/NichelleR/ReasonsWhy/master/Resources/love_df.csv", function(data) {
+  // console.log(data[0])
+
+
+  var 
+    parseDate = d3.timeParse("%Y-%m-%d"),
+    parseTime = d3.timeParse("%I:%M %p")
+    // parseDay = d3.timeParse("%A"),
+    // parseFullDate = d3.timeParse("%Y-%m-%d %I:%M:%S.%L")
+    // formatTime = d3.timeFormat("%I:%M %p")
+
+  data.forEach(function(d) {
+      d.date = parseDate(d.date);
+      d.time = parseTime(d.time);
+      // d.day = parseDay(d.day);
+      // d.timestamp_formatted = parseFullDate(d.timestamp_formatted);
+      // d.time = formatTime(d.timestamp_formatted)
+      d.length = +(d.length);
+  });
+
+  console.log(data[0])
+  // data = data.filter(function(d){ return d.length>0 })
+
+  // Add X axis
+  var x = d3.scaleTime()
+    .domain(d3.extent(data, function(d) { return d.date; }))
+    .range([ 0, w])
+    // .nice()
+    ;
+    messages_svg.append("g")
+    .attr("transform", "translate(0," + h + ")")
+    .attr("class", "xAxis")
+    .call(d3.axisBottom(x));
+    // .tickFormat(d3.timeFormat("%Y")).ticks(d3.timeYear.every(1)));
+
+  // // Add Y axis
+  var y = d3.scaleTime()
+    .domain(d3.extent(data, function(d) { return d.time; }))
+    .range([ h, 0])
+    .nice();
+    messages_svg.append("g")    
+    .attr("class", "yAxis")
+    .call(d3.axisLeft(y)
+    .tickFormat(d3.timeFormat("%I %p")).ticks(d3.timeHour.every(2)));
+
+  var shape = d3.scaleOrdinal()
+    .domain(["MiMs", "Damo"])
+    .range([d3.symbolCircle, d3.symbolTriangle])
+
+
+
+  // // Add dots
+  messages_svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("path")
+      // .attr("cx", function (d) { return x(d.timestamp_formatted); } )
+      // .attr("cy", function (d) { return y(d.time); } )
+      // .attr("r", 1.5)
+      // .style("fill", "#69b3a2")
+      .attr("class", "thing")
+      .attr("d", d3.symbol()
+        .size(75)
+        .type(function(d) {  return shape(d.sender) })
+      )
+      .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.time) + ")"; })
+      .style("stroke", "white")
+      .style("opacity", 0.8)
+
+      
+
+})
+
+</script>
+
 
   <section id="portfolio" class="section-padding wow fadeInUp delay-05s">
     <div class="container">
@@ -932,18 +937,11 @@
       <br>
       <div class="row">
         <div class = "test-sec">
-<<<<<<< HEAD
 
           <div class="col-sm-4">
             <blockquote>
               <h4>Retirement options improve</h4>
               <p>Spouses can inherit each other’s retirement accounts, combining another account with their personal IRA to maximize account growth and benefits; you have more time to withdraw funds. And if one partner is the sole income earner, the other can contribute to a spousal IRA — an option they wouldn’t have if they were single and unemployed.</p>
-=======
-          <div class="col-sm-4">
-            <blockquote>
-              <h3>You save a bundle on taxes</h3>
-              <p>Couples filing jointly will generally be in a lower tax bracket than single filers, even if only one spouse is bringing in income. As a bonus, the IRS lets couples take a standard deduction that’s twice as high as the single-filer deduction.</p>
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
             </blockquote>
             <div class="carousel-info">
               <div class="pull-left"> <span class="testimonials-name">Lisen Stromberg</span> <span class="testimonials-post"><a href = "https://www.moneyunder30.com/financial-benefits-of-marriage">Writer,  Money Under 30</a></span> </div>
@@ -951,13 +949,8 @@
           </div>
           <div class="col-sm-4">
             <blockquote>
-<<<<<<< HEAD
               <h4>You save a bundle on taxes</h4>
               <p>Couples filing jointly will generally be in a lower tax bracket than single filers, even if only one spouse is bringing in income. As a bonus, the IRS lets couples take a standard deduction that’s twice as high as the single-filer deduction.</p>
-=======
-              <h3>Retirement options improve</h3>
-              <p>Spouses can inherit each other’s retirement accounts, combining another account with their personal IRA to maximize account growth and benefits; you have more time to withdraw funds. And if one partner is the sole income earner, the other can contribute to a spousal IRA — an option they wouldn’t have if they were single and unemployed.</p>
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
             </blockquote>
             <div class="carousel-info">
               <div class="pull-left"> <span class="testimonials-name">Lisen Stromberg</span> <span class="testimonials-post"><a href = "https://www.moneyunder30.com/financial-benefits-of-marriage">Writer,  Money Under 30</a></span> </div>
@@ -965,13 +958,8 @@
           </div>
           <div class="col-sm-4">
             <blockquote>
-<<<<<<< HEAD
               <h4>Health insurance is easier — and cheaper — to maintain</h4>
               <p>One partner may have great coverage through an employer while another does not. And insurers generally charge less for a single policy covering two people than they do for two separate policies.</p>
-=======
-              <h3>You save a bundle on taxes</h3>
-              <p>Couples filing jointly will generally be in a lower tax bracket than single filers, even if only one spouse is bringing in income. As a bonus, the IRS lets couples take a standard deduction that’s twice as high as the single-filer deduction.</p>
->>>>>>> a7b8412a677e3b5e203d234b97af131df43a8ab6
             </blockquote>
             <div class="carousel-info">
               <div class="pull-left"> <span class="testimonials-name">Lisen Stromberg</span> <span class="testimonials-post"><a href = "https://www.moneyunder30.com/financial-benefits-of-marriage">Writer,  Money Under 30</a></span> </div>
@@ -1024,9 +1012,10 @@
   <script src="../static/js/jquery.min.js"></script>
   <script src="../static/js/jquery.easing.min.js"></script>
   <script src="../static/js/bootstrap.min.js"></script>
-  <script src="../static/js/jquery.bxslider.min.js"></script>
+  <!-- <script src="../static/js/jquery.bxslider.min.js"></script> -->
   <script src="../static/js/wow.js"></script>
   <script src="../static/js/custom.js"></script>
+  <script src="http://bxslider.com/lib/jquery.bxslider.js"></script>
   <!-- <script src="https://d3js.org/d3.v4.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script> -->
@@ -1035,4 +1024,3 @@
 
 </body>
 
-</html>

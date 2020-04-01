@@ -384,6 +384,60 @@ blockquote {
   /* RGBA(8, 7, 7, 0.92); */
 }
 
+/* svg {
+  position: relative;
+  left: -50px;
+  column-count: 6;
+  height: 750px;
+  width: 750px;
+
+} */
+
+#damo_word_dataviz {
+  /* height: 800px;
+  width: 50%; */
+  /* column-count: 6; */
+  /* position: static; */
+  /* left: 0px; */
+  /* display: inline; */
+  /* top: 50px; */
+  transform: translate(-400px, 0px);
+  /* float: left; */
+}
+
+.yAxis path, .xAxis path, .yAxis line, .xAxis line, .yAxis text, .xAxis text{
+  stroke: #ffffff;
+}
+
+#messages_dataviz {
+  transform: translate(-300px);
+}
+
+/* #mims_word_dataviz { */
+  /* height: 800px;
+  width: 50%; */
+  /* column-count: 6; */
+  /* position: static; */
+  /* left: -500px; */
+  /* display: inline; */
+  /* top: 50px; */
+  /* transform: translate(550px, 0px); */
+  /* float: right; */
+  /* display: inline-block; */
+  /* vertical-align: top; */
+  /* right: 0px; */
+  /* flex: 1; */
+/* } */
+
+/* #col-lg-6 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 50%;
+
+} */
+
 /* #messages .btn-primary {
   background: #BE2525;
   border: 1px solid #BE2525;
@@ -567,3 +621,14 @@ Responsive media queries
   }
 }
 
+.node:hover {
+  stroke-width: 7px !important;
+  /* opacity: 1 !important; */
+  color: #191919;
+}
+
+.thing:hover {
+  stroke-width: 7px !important;
+  /* opacity: 1 !important; */
+  color: #191919;
+}
