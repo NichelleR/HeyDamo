@@ -5,7 +5,7 @@ var height = 900
 function myFunc() {
 var html = document.documentElement;
 var x = html.scrollTop
-document.getElementById ("demo").innerHTML = "Vertically: " + x
+// document.getElementById ("demo").innerHTML = "Vertically: " + x
 }
 
 // append the svg object to the body of the page
