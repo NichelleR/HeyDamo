@@ -14,7 +14,7 @@ var messages_svg = d3.select("#messages_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/NichelleR/ReasonsWhy/master/Resources/love_df.csv", function(data) {
+// d3.csv("https://raw.githubusercontent.com/NichelleR/ReasonsWhy/master/Resources/content_df.csv", function(data) {
   // console.log(data[0])
 
 
@@ -35,7 +35,7 @@ d3.csv("https://raw.githubusercontent.com/NichelleR/ReasonsWhy/master/Resources/
       d.length = +(d.length);
   });
 
-  console.log(data[0])
+//   console.log(data[0])
   // data = data.filter(function(d){ return d.length>0 })
 
   // Add X axis
@@ -61,7 +61,7 @@ d3.csv("https://raw.githubusercontent.com/NichelleR/ReasonsWhy/master/Resources/
     .tickFormat(d3.timeFormat("%I %p")).ticks(d3.timeHour.every(2)));
 
   var shape = d3.scaleOrdinal()
-    .domain(["MiMs", "Damo"])
+    .domain(["Nichelle Rivera", "Adamo Devigili"])
     .range([d3.symbolCircle, d3.symbolTriangle])
 
   var Messages_Tooltip = d3.select("#messages_dataviz")
@@ -86,7 +86,7 @@ d3.csv("https://raw.githubusercontent.com/NichelleR/ReasonsWhy/master/Resources/
 
   var messages_mousemove = function(d) {
     Messages_Tooltip
-      .html("Sender: " + d.sender + "<br>" + "Content: " + d.content + "<br>" + "Date: " + d.date + "<br>" + "Time: " + formatTime(d.time))
+      .html("Sender: " + d.sender + "<br>" + "Content: " + d.content + "<br>" + "Date: " + formatDate(d.date) + "<br>" + "Time: " + formatTime(d.time))
       // .style("top", (d3.event.pageY+100)+"px")
       // .style("left", (d3.event.pageX) +"px")
       // .style("left", (d3.mouse(this)[0]) + "px")
@@ -108,26 +108,26 @@ d3.csv("https://raw.githubusercontent.com/NichelleR/ReasonsWhy/master/Resources/
     }
 
   // // Add dots
-  messages_svg.append('g')
-    .selectAll("dot")
-    .data(data)
-    .enter()
-    .append("path")
-      .attr("cx", function (d) { return x(d.date); } )
-      .attr("cy", function (d) { return y(d.time); } )
-      // .attr("r", 1.5)
-      // .style("fill", "#69b3a2")
-      .attr("class", "thing")
-      .attr("d", d3.symbol()
-        .size(75)
-        .type(function(d) {  return shape(d.sender) })
-      )
-      .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.time) + ")"; })
-      .style("stroke", "white")
-      .style("opacity", 0.8)
-      .on("mouseover", messages_mouseover) // What to do when hovered
-      .on("mousemove", messages_mousemove)
-      .on("mouseleave", messages_mouseleave)
+//   messages_svg.append('g')
+//     .selectAll("dot")
+//     .data(data)
+//     .enter()
+//     .append("path")
+//       .attr("cx", function (d) { return x(d.date); } )
+//       .attr("cy", function (d) { return y(d.time); } )
+//       // .attr("r", 1.5)
+//       // .style("fill", "#69b3a2")
+//       .attr("class", "thing")
+//       .attr("d", d3.symbol()
+//         .size(75)
+//         .type(function(d) {  return shape(d.sender) })
+//       )
+//       .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.time) + ")"; })
+//       .style("stroke", "white")
+//       .style("opacity", 0.8)
+//       .on("mouseover", messages_mouseover) // What to do when hovered
+//       .on("mousemove", messages_mousemove)
+//       .on("mouseleave", messages_mouseleave)
 
 
     
