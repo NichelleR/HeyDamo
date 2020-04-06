@@ -106,7 +106,7 @@ Responsive media queries
   min-height: 1250px;
 }
 
-.navbar-border {}
+/* .navbar-border {} */
 
 .banner-text {
   border-left: 5px solid #191919;
@@ -429,14 +429,16 @@ blockquote {
   /* flex: 1; */
 /* } */
 
-/* #col-lg-6 {
-  position: relative;
+#filter_word {
+  margin: auto;
+  text-align: center;
+  /* position: relative;
   min-height: 1px;
   padding-right: 15px;
-  padding-left: 15px;
-  width: 50%;
-
-} */
+  padding-left: 15px; */
+  width: 25%;
+  display: block;
+}
 
 /* #messages .btn-primary {
   background: #BE2525;
@@ -630,5 +632,5 @@ Responsive media queries
 .thing:hover {
   stroke-width: 7px !important;
   /* opacity: 1 !important; */
-  color: #191919;
+  /* color: #191919; */
 }
